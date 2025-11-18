@@ -1,9 +1,12 @@
 /* Recommended global reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -108,11 +111,22 @@ img {
 
 /* Reduce large paddings and font-sizes on small viewports */
 @media (max-width: 480px) {
-  h1 { font-size: 28px; }
-  h1 .accent-text { font-size: 36px; }
-  h2 { font-size: 20px; }
-  h2 .accent-text { font-size: 26px; }
-  header, section { padding: 48px 0; }
+  h1 {
+    font-size: 28px;
+  }
+  h1 .accent-text {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h2 .accent-text {
+    font-size: 26px;
+  }
+  header,
+  section {
+    padding: 48px 0;
+  }
 }
 
 .inverse {
