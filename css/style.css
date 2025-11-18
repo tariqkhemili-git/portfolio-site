@@ -1,3 +1,12 @@
+/* Recommended global reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -7,8 +16,11 @@ body {
 }
 
 .container {
-  width: 570px;
+  width: 100%;
+  max-width: 570px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 h1,
@@ -78,6 +90,29 @@ a:focus {
 header,
 section {
   padding: 100px 0;
+}
+
+/* Ensure background colors applied to sections spread full width */
+header,
+section {
+  width: 100%;
+  display: block;
+}
+
+/* Make images responsive and avoid forcing horizontal overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reduce large paddings and font-sizes on small viewports */
+@media (max-width: 480px) {
+  h1 { font-size: 28px; }
+  h1 .accent-text { font-size: 36px; }
+  h2 { font-size: 20px; }
+  h2 .accent-text { font-size: 26px; }
+  header, section { padding: 48px 0; }
 }
 
 .inverse {
